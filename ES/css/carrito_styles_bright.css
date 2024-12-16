@@ -1,0 +1,154 @@
+body {
+  font-family: "Jost", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark text for readability */
+  background: linear-gradient(
+    -45deg,
+    #ffffff,
+    /* Light white */ #ffe6f0,
+    /* Light pink */ #ffdede,
+    /* Soft pink */ #fff0f5,
+    /* Light lavender */ #fff5f5 /* Very light pink */
+  );
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cart {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+h2 {
+  font-family: "Jost", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 2.5em;
+  color: #333; /* Dark text for contrast */
+  margin-bottom: 40px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1em;
+  color: #333; /* Dark text for contrast */
+}
+
+th {
+  background-color: #ffdede; /* Soft pink */
+}
+
+tr:nth-child(even) {
+  background-color: #ffe6f0; /* Light pink */
+}
+
+tr:nth-child(odd) {
+  background-color: #fff0f5; /* Light lavender */
+}
+
+tr:hover {
+  background-color: #f3d6e2; /* Slightly darker pink for hover */
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: #ffe6f0; /* Light pink */
+}
+
+button {
+  background-color: #ffdede; /* Soft pink */
+  color: #333; /* Dark text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color: #ffe6f0; /* Slightly darker pink for hover */
+  transform: scale(1.05);
+}
+
+.empty-cart-btn {
+  margin-top: 20px;
+  font-size: 1.5em;
+  padding: 15px 30px;
+}
+
+.remove-item-btn {
+  background-color: #f99; /* Light red for remove button */
+  padding: 8px 15px;
+}
+
+.remove-item-btn:hover {
+  background-color: #f00; /* Bright red on hover */
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 8px 16px;
+    font-size: 1.1em;
+  }
+
+  .empty-cart-btn {
+    padding: 12px 25px;
+    font-size: 1.3em;
+  }
+
+  .remove-item-btn {
+    padding: 6px 12px;
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 0.9em;
+  }
+
+  button {
+    padding: 6px 12px;
+    font-size: 1em;
+  }
+
+  .empty-cart-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+  }
+
+  .remove-item-btn {
+    padding: 5px 10px;
+    font-size: 0.9em;
+  }
+}

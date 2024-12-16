@@ -1,0 +1,15 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.cache
+
+# Ignore hidden files
+.env
+*.bak
+
+# Ignore vendor (if using Composer in the future)
+vendor/

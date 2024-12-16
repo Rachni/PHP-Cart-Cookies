@@ -1,0 +1,7 @@
+{
+  "name": "rachni/preference-cart-system",
+  "description": "A PHP project for managing user preferences and shopping carts using cookies.",
+  "require": {
+    "php": ">=7.4"
+  }
+}
