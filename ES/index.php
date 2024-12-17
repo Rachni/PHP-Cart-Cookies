@@ -1,8 +1,6 @@
 <?php
 session_start();
 include 'productos.php'; // Incluye los productos
-include 'header.php'; // Muestra el header dinamico
-// Función para obtener el carrito desde la cookie
 function getCartFromCookie()
 {
     return isset($_COOKIE['cart']) ? json_decode($_COOKIE['cart'], true) : [];
@@ -35,6 +33,8 @@ if (isset($_POST['addProduct'])) {
     $productName = $_POST['addProduct'];
     addToCart($productName, $products);  // Añadir el producto al carrito
 }
+
+include 'header.php'; // Muestra el header dinamico
 ?>
 
 <!DOCTYPE html>

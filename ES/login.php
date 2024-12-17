@@ -29,7 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
 
 // HEADER DINÁMICO
 include 'header.php';
-
 ?>
 
 <!DOCTYPE html>

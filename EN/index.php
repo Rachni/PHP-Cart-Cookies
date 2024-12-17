@@ -1,7 +1,6 @@
 <?php
 session_start();
 include 'products.php'; // Incluye los productos
-include 'header.php'; // Muestra el header dinamico
 // Función para obtener el carrito desde la cookie
 function getCartFromCookie()
 {
@@ -35,6 +34,7 @@ if (isset($_POST['addProduct'])) {
     $productName = $_POST['addProduct'];
     addToCart($productName, $products);  // Añadir el producto al carrito
 }
+include 'header.php'; 
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +53,6 @@ if (isset($_POST['addProduct'])) {
         echo '<link rel="stylesheet" href="css/index_styles.css"> 
         <link rel="stylesheet" href="css/header_styles.css">';
     }
-    ?>
     ?>
     <link rel="stylesheet" href="css/header_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">

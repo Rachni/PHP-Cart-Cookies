@@ -5,11 +5,6 @@ session_start();
 // Array de productos
 include 'productos.php';
 
-// Header
-include 'header.php';
-
-
-
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['user'])) {
     // Si no ha iniciado sesión, redirigir a la página de login
@@ -92,6 +87,7 @@ if (isset($_POST['removeProduct'])) {
     }
 
 $cart = getCartFromCookie();
+include 'header.php';
 ?>
 
 <!DOCTYPE html>

@@ -5,11 +5,6 @@ session_start();
 // Array de productos
 include 'products.php';
 
-// Header
-include 'header.php';
-
-
-
 // Verificar si el usuario ha iniciado sesión
 if (!isset($_SESSION['user'])) {
     // Si no ha iniciado sesión, redirigir a la página de login
@@ -77,21 +72,22 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
         addProductToCart($_POST['addProduct'], $products);
     }
 
-    
-if (isset($_POST['removeProduct'])) {
-    removeProductFromCart($_POST['removeProduct']); // Llamar a la función de eliminación
-    header('Location: carrito.php'); // Redirigir para actualizar la interfaz
-    exit;
+
+    if (isset($_POST['removeProduct'])) {
+        removeProductFromCart($_POST['removeProduct']); // Llamar a la función de eliminación
+        header('Location: carrito.php'); // Redirigir para actualizar la interfaz
+        exit;
+    }
+
+    removeProductFromCart($_POST['removeProduct']);
 }
 
-        removeProductFromCart($_POST['removeProduct']);
-    }
-
-    if (isset($_POST['emptyCart'])) {
-        emptyCart();
-    }
+if (isset($_POST['emptyCart'])) {
+    emptyCart();
+}
 
 $cart = getCartFromCookie();
+include 'header.php';
 ?>
 
 <!DOCTYPE html>

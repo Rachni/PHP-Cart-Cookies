@@ -1,6 +1,5 @@
 <?php
 session_start();
-include 'header.php';
 // Interacción con el formulario
 if (isset($_POST['submit'])) {
     $language = $_POST['language'];
@@ -24,7 +23,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
-
+include 'header.php'; /
 ?>
 <!DOCTYPE html>
 <html lang="en">

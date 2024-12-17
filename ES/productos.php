@@ -36,4 +36,3 @@ $products = [
         'image' => 'img/arehucas.jpg'
     ],
 ];
-?>
