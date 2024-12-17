@@ -1,0 +1,9 @@
+{
+    "build": {
+        "builder": "nixpacks",
+        "buildCommand": "composer install --ignore-platform-reqs"
+    },
+    "start": {
+        "cmd": "php -S 0.0.0.0:8080 -t ."
+    }
+}
